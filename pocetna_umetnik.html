@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Početna - Umetnik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Dobro dosli u vasu galeriju</h1>
+  <nav>
+    <ul>
+      <li><a href="pocetna_umetnik.html">Početna</a></li>
+      <li><a href="statocenekom.html">Statistika</a></li>
+      <li><span id="imePrezimeUmetnika"></span></li>
+      <li><a href="#odjava">Odjava</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+  <section id="galerija">
+    <h2>Moja Galerija</h2>
+    <button type="button" id="dodajSliku">Dodaj sliku</button>
+    <!-- Forma za dodavanje slika u galeriju -->
+    <div id="modalDodajSliku" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="zatvoriModal('modalDodajSliku')">&times;</span>
+
+            <!-- Forma za dodavanje slike -->
+            <h2>Dodaj sliku u galeriju</h2>
+            <form id="formaDodajSliku">
+                <label for="naslovSlike">Naslov slike:</label>
+                <input type="text" id="naslovSlike" required>
+
+                <label for="opisSlike">Opis slike:</label>
+                <input type="text" id="opisSlike" required>
+
+                <label for="slikaUpload">Izaberite sliku:</label>
+                <input type="file" id="slikaUpload" accept="image/*" required>
+
+                <button type="button" onclick="dodajSliku()">Dodaj sliku</button>
+            </form>
+        </div>
+    </div>
+  </section>
+
+
+  <section id="odjava">
+    <h2>Odjava</h2>
+    <form id="formaOdjave">
+      <button type="button" onclick="odjaviUmetnika()">Odjavi se</button>
+    </form>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Galerija slika</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script_umetnik.js"></script>
+
+</body>
+</html>

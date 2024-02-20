@@ -1,0 +1,149 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(1.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  
+  header {
+    background-color: #9F8C76;
+    color: white;
+    text-align: center;
+    padding: 0.3em;
+  }
+  
+  section {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 16px;
+  }
+  
+  button {
+    background-color: #9F8C76;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%; 
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #7F6C56;
+  }
+  
+  footer {
+    background-color: #9F8C76;
+    color: white;
+    text-align: center;
+    padding: 0.005em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+ /* Postavljanje flexboxa na navigaciju i stilizacija linkova */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9F8C76; 
+  padding: 10px; 
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+li {
+  margin-right: 15px;
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px; /* Zaobljeni uglovi */
+  transition: background-color 0.3s; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+a:hover {
+  background-color: #7F6C56;
+}
+
+
+  /* Stil za modalni prozor */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.slika {
+  border: 1px solid #ddd; /* Dodajemo okvir slike */
+  margin: 10px; /* Dodajemo razmak između slika */
+  padding: 10px; /* Dodajemo prostor unutar okvira slike */
+  text-align: center; /* Centriramo sliku i elemente unutar okvira */
+}
+
+.slika img {
+  width: 100%; /* Sve slike će zauzeti 100% širine unutar okvira */
+  height: auto; /* Održavamo odnos širine i visine slike */
+  border: 1px solid #ddd; /* Dodajemo okvir svakoj slici unutar okvira */
+}
+
+.ocena-komentar {
+  margin-top: 10px; /* Dodajemo razmak između ocene/komentara i slike */
+}
+
+textarea {
+  width: 100%; /* Textarea će zauzeti 100% širine unutar okvira */
+  box-sizing: border-box; /* Uključujemo padding i border u širinu */
+}

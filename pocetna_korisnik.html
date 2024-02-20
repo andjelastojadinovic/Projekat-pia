@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Početna - Korisnik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Dobro dosli u vasu galeriju</h1>
+  <!-- Search Bar -->
+  <div id="search-container">
+    <label for="search">Pretraga slika:</label>
+    <input type="text" id="search" name="search" placeholder="Unesite pojam za pretragu...">
+    <button onclick="pretraziSlike()">Pretraži</button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="pocetna_korisnik.html">Početna</a></li>
+      <li><a href="#galerija">Galerija slika</a></li>
+      <li><a href="#omiljeneSlike">Omiljene slike</a></li>
+      <li><span id="imePrezimeKorisnika"></span></li>
+      <li><a href="#odjava">Odjava</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+  <section id="galerija">
+    <div id="slikeUmetnika"></div>
+    <h2>Galerija slika</h2>
+
+  </section>
+  <section id="omiljeneSlike">
+    <h2>Omiljene slike</h2>
+    <!-- Prikaz omiljenih slika korisnika -->
+    <!-- Ovde možete dodati dinamičko učitavanje omiljenih slika putem JavaScript-a -->
+    <div class="slika">
+      <img src="1.jpg" alt="Naziv slike">
+    </div>
+    <!-- Ponavljajte ovu strukturu za svaku omiljenu sliku -->
+  </section>
+  <section id="odjava">
+    <h2>Odjava</h2>
+    <form id="formaOdjave">
+      <!-- Dodajte polja za odjavu, kao što su korisničko ime, lozinka, itd. -->
+      <button type="button" onclick="odjaviKorisnika()">Odjavi se</button>
+    </form>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Galerija slika</p>
+</footer>
+
+<script src="script_korisnik.js"></script>
+</body>
+</html>

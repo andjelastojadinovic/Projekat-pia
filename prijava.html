@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerija slika</title>
+  <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+
+
+<!-- Header -->
+<header>
+  <h1>Prijava na galeriju slika</h1>
+  <nav>
+    <ul>
+      <li><a href="pocetna.html">Početna</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Korisnik Forma -->
+<section id="korisnikForma">
+  <h2>Korisnik</h2>
+  <form id="korisnikForm" action="login.php" method="POST">
+    <label for="korisnikUsername">Korisničko ime:</label>
+    <input type="text" id="korisnikUsername" required>
+
+    <label for="korisnikPassword">Lozinka:</label>
+    <input type="password" id="korisnikPassword" required>
+
+
+    <button type="button" onclick="prijaviSe('korisnik')">Prijavi se</button>
+  </form>
+
+  <p>Nemate nalog? <a href="#" id="linkRegistrujSe">Registruj se</a></p>
+
+  <!-- Modalni prozor za registraciju -->
+<div id="modalRegistracija" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="zatvoriModal('modalRegistracija')">&times;</span>
+    
+    <!-- Korisnik Forma za registraciju -->
+<h2>Registracija korisnika</h2>
+<form id="formaRegistracijeKorisnika" action="register.php" method="POST">
+  <label for="ime">Ime:</label>
+  <input type="text" id="ime" name="ime" required>
+
+  <label for="prezime">Prezime:</label>
+  <input type="text" id="prezime" name="prezime" required>
+
+  <label for="noviKorisnikUsername">Korisničko ime:</label>
+  <input type="text" id="noviKorisnikUsername" name="korisnicko_ime" required>
+
+  <label for="noviKorisnikPassword">Lozinka:</label>
+  <input type="password" id="noviKorisnikPassword" name="lozinka" required>
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" name="email" required>
+
+  <button type="submit" id="dugmeRegistracije">Registruj se</button>
+</form>
+
+
+  </div>
+</div>
+</section>
+
+<!-- ... -->
+<!-- Umetnik Forma -->
+<section id="umetnikForma">
+    <h2>Umetnik</h2>
+    <form action="login.php" method="POST">
+      <label for="umetnikUsername">Korisničko ime:</label>
+      <input type="text" id="umetnikUsername" required>
+  
+      <label for="umetnikPassword">Lozinka:</label>
+      <input type="password" id="umetnikPassword" required>
+  
+      <button type="submit" onclick="prijaviSe('umetnik')">Prijavi se kao umetnik</button>
+    </form>
+  
+    <p>Nemate nalog? <a href="#" id="linkRegistrujSeUmetnik">Registruj se</a></p>
+
+     <!-- Modalni prozor za registraciju -->
+<div id="modalRegistracijaUmetnik" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="zatvoriModal('modalRegistracijaUmetnik')">&times;</span>
+      
+      <!-- Umetnik Forma za registraciju -->
+  <h2>Registracija umetnika</h2>
+  <form id="formaRegistracijeUmetnika" action="registerumetnik.php" method="POST">
+    <label for="imeUmetnik">Ime:</label>
+    <input type="text" id="imeUmetnik" name="ime" required>
+
+    <label for="prezimeUmetnik">Prezime:</label>
+    <input type="text" id="prezimeUmetnik" name="prezime" required>
+
+    <label for="umetnikUsername">Korisničko ime:</label>
+    <input type="text" id="noviUmetnikUsername" name="korisnicko_ime" required>
+
+    <label for="umetnikPassword">Lozinka:</label>
+    <input type="password" id="noviUmetnikPassword" name="lozinka" required>
+
+    <label for="emailUmetnik">E-mail:</label>
+    <input type="email" id="emailUmetnik" name="email" required>
+
+    <button type="submit" id="dugmeRegistracijeUmetnika">Registruj se</button>
+</form>
+
+    </div>
+  </div>
+  </section>
+
+
+<!-- Administrator Forma -->
+<section id="adminForma">
+  <h2>Administrator</h2>
+  <form>
+    <button type="submit">Prijavi se kao administrator</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Galerija slika</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
